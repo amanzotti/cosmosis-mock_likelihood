@@ -1,0 +1,117 @@
+#cosmological_parameters--omch2	post
+#sampler=grid
+#n_varied=1
+#module_0=consistent_parameters 1.0
+#module_1=camb Jan15
+## CITE http://arxiv.org/abs/1201.3654
+## CITE http://arxiv.org/abs/astro-ph/9911177
+#module_2=forecast #name from ini file
+#nsample_dimension=25
+#save=
+#nstep=-1
+#allow_large=False
+## START_OF_PARAMS_INI
+## [runtime]
+## sampler = grid
+## 
+## [emcee]
+## walkers = 64
+## samples = 800
+## nsteps = 30
+## 
+## [metropolis]
+## nsteps = 10
+## random_start = F
+## samples = 100000
+## rconverge = 0.02
+## 
+## [test]
+## save_dir = /home/manzotti/cosmosis/modules/likelihoods/cmb_mock_likelihood/output
+## fatal_errors = T
+## 
+## [output]
+## format = text
+## filename = /home/manzotti/cosmosis/modules/likelihoods/cmb_mock_likelihood/output.txt
+## 
+## [maxlike]
+## maxiter = 300
+## tolerance = 0.005
+## output_ini = /home/manzotti/cosmosis/modules/likelihoods/cmb_mock_likelihood/max.ini
+## 
+## [snake]
+## nsample_dimension = 10
+## 
+## [grid]
+## nsample_dimension = 25
+## 
+## [pipeline]
+## modules = consistency camb forecast
+## values = modules/likelihoods/cmb_mock_likelihood/values_mock.ini
+## likelihoods = forecast
+## quiet = F
+## debug = T
+## timing = F
+## 
+## [planck]
+## file = modules/likelihoods/cmb_mock_likelihood/planck/planck_interface.so
+## t_high_file = ${PLANCK_DATA_DIR}/CAMspec_v6.2TN_2013_02_26_dist.clik
+## 
+## [consistency]
+## file = cosmosis-standard-library/utility/consistency/consistency_interface.py
+## 
+## [camb]
+## file = cosmosis-standard-library/boltzmann/camb/camb.so
+## mode = cmb
+## lmax = 4500
+## feedback = 0
+## do_tensors = F
+## do_lensing = F
+## do_nonlinear = F
+## high_ell_template = cosmosis-standard-library/boltzmann/camb/camb_Jan15/HighLExtrapTemplate_lenspotentialCls.dat
+## 
+## [forecast]
+## file = modules/likelihoods/cmb_mock_likelihood/mock_like_interface.py
+## 
+## END_OF_PARAMS_INI
+## START_OF_VALUES_INI
+## [cosmological_parameters]
+## omch2 = 0.11 0.12029 0.13
+## omnuh2 = 0.0009
+## h0 = 0.67
+## ombh2 = 0.022068
+## massive_nu = 1
+## tau = 0.08
+## n_s = 0.96
+## a_s = 2.1e-9
+## omega_k = 0.0
+## w = -1.0
+## wa = 0.0
+## 
+## END_OF_VALUES_INI
+## START_OF_PRIORS_INI
+## END_OF_PRIORS_INI
+0.11	-10001115.5407
+0.110833333333	-10000928.7451
+0.111666666667	-10000759.5554
+0.1125	-10000607.5609
+0.113333333333	-10000471.8994
+0.114166666667	-10000352.5344
+0.115	-10000249.6619
+0.115833333333	-10000162.7747
+0.116666666667	-10000091.3378
+0.1175	-10000035.1403
+0.118333333333	-9999994.04136
+0.119166666667	-9999967.56739
+0.12	-9999955.5223
+0.120833333333	-9999957.62459
+0.121666666667	-9999973.58276
+0.1225	-10000003.1445
+0.123333333333	-10000045.904
+0.124166666667	-10000101.8566
+0.125	-10000170.3117
+0.125833333333	-10000251.5445
+0.126666666667	-10000344.6664
+0.1275	-10000450.0251
+0.128333333333	-10000566.7129
+0.129166666667	-10000694.8977
+0.13	-10000834.6747
